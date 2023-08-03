@@ -1,3 +1,9 @@
+--Task 1
+--Given the events CTE with columns id, occur_time, and close_time, write a SQL query to generate task_id for events occurring before their corresponding close times. 
+--The task_id should be assigned based on the chronological order of the events. If there are multiple events with the same id and overlapping time intervals, they should be considered as a single task. 
+--The result should display the id, task_id earliest occur_time and latest close_time for each task.
+
+
 duckdb> WITH events(id, occur_time, close_time) AS (
    ...>     VALUES
    ...>     (1, '09:00:00', '10:00:00'),
